@@ -76,13 +76,24 @@
         android:textColor="@android:color/black"
         android:textSize="16sp" />
 
+    <TextView
+        android:id="@+id/Thanks_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price_text_view"
+        android:layout_marginLeft="12sp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/price_text_view"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:onClick="submitOrder"
         android:text="Order" />
 
