@@ -32,18 +32,22 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
+
+
         //int numberOfCoffees = 3;
         //display(numberOfCoffees);
-        displayPrice(quantity * 5);
+        //displayPrice(quantity * 5);
+        int price = calculatePrice();
+        displayPrice(price);
         displayMessage("Thank You Amigo !");
     }
 
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void display(int number) {
+    private void displayQuantity(int Number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number );
+        quantityTextView.setText("" + Number );
     }
 
 
@@ -55,19 +59,32 @@ public class MainActivity extends AppCompatActivity {
     public void Increment(View view) {
 
         quantity = quantity + 1;
-        display(quantity);
+        displayQuantity(quantity);
     }
 
     public void Decrement(View view) {
         quantity = quantity - 1;
-        display(quantity);
+        displayQuantity(quantity);
     }
 
     /**
      * This method displays the given text on the screen.
      */
     public void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        TextView priceTextView = (TextView) findViewById(R.id.Thanks_view);
         priceTextView.setText(message);
+    }
+
+
+    /**
+     * Calculates the price of the order.
+     *
+     * quantity  is the number of cups of coffee ordered
+     */
+    private int calculatePrice() {
+
+            return quantity * 5;
+
+        //int price = quantity * 5;
     }
 }
